@@ -358,6 +358,36 @@
       "to": "patient_morale",
       "type": "Positive",
       "description": "High system morale enhances patient morale"
+    },
+    {
+      "from": "staff",
+      "to": "patient",
+      "type": "Positive",
+      "description": "Staff directly impact patient outcomes"
+    },
+    {
+      "from": "patient",
+      "to": "system",
+      "type": "Positive",
+      "description": "Patient outcomes influence overall system performance"
+    },
+    {
+      "from": "space",
+      "to": "patient",
+      "type": "Positive",
+      "description": "Appropriate care spaces improve patient care"
+    },
+    {
+      "from": "resource",
+      "to": "staff",
+      "type": "Positive",
+      "description": "Resources enable staff to deliver effective care"
+    },
+    {
+      "from": "system",
+      "to": "staff",
+      "type": "Positive",
+      "description": "System health supports staff wellbeing and performance"
     }
   ]
 }
