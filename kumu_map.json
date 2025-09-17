@@ -388,6 +388,120 @@
       "to": "staff",
       "type": "Positive",
       "description": "System health supports staff wellbeing and performance"
+    },
+    {
+      "from": "staff",
+      "to": "staff_type",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "staff",
+      "to": "staff_capability",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "staff",
+      "to": "staff_energy",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "staff",
+      "to": "staff_morale",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "space",
+      "to": "space_type",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "space",
+      "to": "space_privacy",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "space",
+      "to": "space_cleanliness",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "space",
+      "to": "space_environment",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "patient",
+      "to": "patient_type",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "patient",
+      "to": "patient_wellness",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "patient",
+      "to": "patient_uncertainty",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "patient",
+      "to": "patient_morale",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "resource",
+      "to": "resource_type",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "resource",
+      "to": "resource_effectiveness",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "resource",
+      "to": "resource_repair",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "resource",
+      "to": "resource_cleanliness",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "system",
+      "to": "system_flow",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "system",
+      "to": "system_finance",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
+    },
+    {
+      "from": "system",
+      "to": "system_morale",
+      "type": "Positive",
+      "description": "Meta-state hub to attribute"
     }
   ]
 }
