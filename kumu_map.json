@@ -1,0 +1,363 @@
+{
+  "elements": [
+    {
+      "id": "staff",
+      "label": "Staff",
+      "type": "meta-state",
+      "description": "People delivering care"
+    },
+    {
+      "id": "staff_type",
+      "label": "Staff Type",
+      "type": "attribute",
+      "tags": [
+        "Staff"
+      ],
+      "description": "Consultant, junior doctor, nurse, AHP, locum"
+    },
+    {
+      "id": "staff_capability",
+      "label": "Staff Capability",
+      "type": "attribute",
+      "tags": [
+        "Staff"
+      ],
+      "description": "Skills, specialty match, continuity"
+    },
+    {
+      "id": "staff_energy",
+      "label": "Staff Energy",
+      "type": "attribute",
+      "tags": [
+        "Staff"
+      ],
+      "description": "Rest vs fatigue, overtime, shift length"
+    },
+    {
+      "id": "staff_morale",
+      "label": "Staff Morale",
+      "type": "attribute",
+      "tags": [
+        "Staff"
+      ],
+      "description": "Job satisfaction, stress, strike risk"
+    },
+    {
+      "id": "space",
+      "label": "Space",
+      "type": "meta-state",
+      "description": "Physical environment for care"
+    },
+    {
+      "id": "space_type",
+      "label": "Space Type",
+      "type": "attribute",
+      "tags": [
+        "Space"
+      ],
+      "description": "Ward, ICU, theatre, AMU, ED"
+    },
+    {
+      "id": "space_privacy",
+      "label": "Space Privacy",
+      "type": "attribute",
+      "tags": [
+        "Space"
+      ],
+      "description": "Side rooms, dignity, infection control"
+    },
+    {
+      "id": "space_cleanliness",
+      "label": "Space Cleanliness",
+      "type": "attribute",
+      "tags": [
+        "Space"
+      ],
+      "description": "Bed turnover, hygiene, infection risk"
+    },
+    {
+      "id": "space_environment",
+      "label": "Space Environment",
+      "type": "attribute",
+      "tags": [
+        "Space"
+      ],
+      "description": "Noise, crowding, ward design"
+    },
+    {
+      "id": "patient",
+      "label": "Patient",
+      "type": "meta-state",
+      "description": "People receiving care"
+    },
+    {
+      "id": "patient_type",
+      "label": "Patient Type",
+      "type": "attribute",
+      "tags": [
+        "Patient"
+      ],
+      "description": "Medical, surgical, cancer, paediatrics, frail elderly"
+    },
+    {
+      "id": "patient_wellness",
+      "label": "Patient Wellness",
+      "type": "attribute",
+      "tags": [
+        "Patient"
+      ],
+      "description": "Recovery trajectory, LOS progress"
+    },
+    {
+      "id": "patient_uncertainty",
+      "label": "Patient Uncertainty",
+      "type": "attribute",
+      "tags": [
+        "Patient"
+      ],
+      "description": "Diagnostic clarity, complexity"
+    },
+    {
+      "id": "patient_morale",
+      "label": "Patient Morale",
+      "type": "attribute",
+      "tags": [
+        "Patient"
+      ],
+      "description": "Comfort, trust, satisfaction"
+    },
+    {
+      "id": "resource",
+      "label": "Resource",
+      "type": "meta-state",
+      "description": "Tools, consumables, assets"
+    },
+    {
+      "id": "resource_type",
+      "label": "Resource Type",
+      "type": "attribute",
+      "tags": [
+        "Resource"
+      ],
+      "description": "Drugs, blood, diagnostics, theatres, IT"
+    },
+    {
+      "id": "resource_effectiveness",
+      "label": "Resource Effectiveness",
+      "type": "attribute",
+      "tags": [
+        "Resource"
+      ],
+      "description": "How well resources deliver output"
+    },
+    {
+      "id": "resource_repair",
+      "label": "Resource State of Repair",
+      "type": "attribute",
+      "tags": [
+        "Resource"
+      ],
+      "description": "Working vs broken, maintenance backlog"
+    },
+    {
+      "id": "resource_cleanliness",
+      "label": "Resource Cleanliness",
+      "type": "attribute",
+      "tags": [
+        "Resource"
+      ],
+      "description": "Sterility, infection risk"
+    },
+    {
+      "id": "system",
+      "label": "System",
+      "type": "meta-state",
+      "description": "Overall hospital performance"
+    },
+    {
+      "id": "system_flow",
+      "label": "System Flow",
+      "type": "attribute",
+      "tags": [
+        "System"
+      ],
+      "description": "Patient pace, congestion, resilience"
+    },
+    {
+      "id": "system_finance",
+      "label": "System Finance",
+      "type": "attribute",
+      "tags": [
+        "System"
+      ],
+      "description": "Budget, spend vs allocation, penalties"
+    },
+    {
+      "id": "system_morale",
+      "label": "System Morale",
+      "type": "attribute",
+      "tags": [
+        "System"
+      ],
+      "description": "Collective wellbeing of staff & patients"
+    }
+  ],
+  "connections": [
+    {
+      "from": "staff_capability",
+      "to": "patient_wellness",
+      "type": "Positive",
+      "description": "Better staff capability accelerates recovery"
+    },
+    {
+      "from": "staff_energy",
+      "to": "patient_uncertainty",
+      "type": "Negative",
+      "description": "Low energy increases errors and delays diagnosis"
+    },
+    {
+      "from": "staff_morale",
+      "to": "system_morale",
+      "type": "Positive",
+      "description": "High staff morale supports system morale"
+    },
+    {
+      "from": "space_cleanliness",
+      "to": "patient_morale",
+      "type": "Positive",
+      "description": "Clean environment improves patient morale and safety"
+    },
+    {
+      "from": "space_environment",
+      "to": "patient_wellness",
+      "type": "Negative",
+      "description": "Noisy or crowded wards slow recovery"
+    },
+    {
+      "from": "resource_effectiveness",
+      "to": "system_flow",
+      "type": "Positive",
+      "description": "Effective resources improve throughput"
+    },
+    {
+      "from": "resource_repair",
+      "to": "staff_capability",
+      "type": "Positive",
+      "description": "Working equipment boosts staff capability"
+    },
+    {
+      "from": "patient_morale",
+      "to": "system_morale",
+      "type": "Positive",
+      "description": "Happier patients improve system morale"
+    },
+    {
+      "from": "system_flow",
+      "to": "staff_morale",
+      "type": "Positive",
+      "description": "Smooth flow reduces stress and improves morale"
+    },
+    {
+      "from": "system_finance",
+      "to": "resource_repair",
+      "type": "Positive",
+      "description": "Budget enables timely repair of resources"
+    },
+    {
+      "from": "staff_type",
+      "to": "patient_type",
+      "type": "Positive",
+      "description": "Matching staff type to patient type improves care quality"
+    },
+    {
+      "from": "patient_type",
+      "to": "space_type",
+      "type": "Positive",
+      "description": "Patient type determines appropriate care space"
+    },
+    {
+      "from": "space_type",
+      "to": "patient_wellness",
+      "type": "Positive",
+      "description": "Appropriate space type enhances patient recovery"
+    },
+    {
+      "from": "staff_type",
+      "to": "staff_capability",
+      "type": "Positive",
+      "description": "Staff type influences capability and skill set"
+    },
+    {
+      "from": "staff_energy",
+      "to": "staff_morale",
+      "type": "Positive",
+      "description": "Higher energy levels improve staff morale"
+    },
+    {
+      "from": "staff_morale",
+      "to": "patient_morale",
+      "type": "Positive",
+      "description": "Staff morale positively impacts patient morale"
+    },
+    {
+      "from": "patient_uncertainty",
+      "to": "system_flow",
+      "type": "Negative",
+      "description": "High patient uncertainty disrupts system flow"
+    },
+    {
+      "from": "patient_wellness",
+      "to": "system_flow",
+      "type": "Positive",
+      "description": "Improved patient wellness facilitates better system flow"
+    },
+    {
+      "from": "patient_morale",
+      "to": "system_finance",
+      "type": "Positive",
+      "description": "Positive patient morale can enhance financial performance"
+    },
+    {
+      "from": "resource_type",
+      "to": "resource_effectiveness",
+      "type": "Positive",
+      "description": "Resource type affects how effective it is in use"
+    },
+    {
+      "from": "resource_cleanliness",
+      "to": "patient_morale",
+      "type": "Positive",
+      "description": "Clean resources improve patient morale"
+    },
+    {
+      "from": "resource_cleanliness",
+      "to": "patient_wellness",
+      "type": "Positive",
+      "description": "Clean resources contribute to better patient wellness"
+    },
+    {
+      "from": "system_flow",
+      "to": "system_finance",
+      "type": "Positive",
+      "description": "Efficient system flow improves financial outcomes"
+    },
+    {
+      "from": "system_finance",
+      "to": "staff_energy",
+      "type": "Positive",
+      "description": "Better finances allow for improved staff working conditions"
+    },
+    {
+      "from": "system_morale",
+      "to": "staff_energy",
+      "type": "Positive",
+      "description": "Good system morale boosts staff energy"
+    },
+    {
+      "from": "system_morale",
+      "to": "patient_morale",
+      "type": "Positive",
+      "description": "High system morale enhances patient morale"
+    }
+  ]
+}
